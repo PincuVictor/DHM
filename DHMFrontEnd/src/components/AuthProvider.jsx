@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import AuthContext from "./AuthContext.jsx";
 
+const API_LOGIN = import.meta.env.VITE_API_LOGIN;
+const API_LOGIN_REFRESH = import.meta.env.VITE_API_LOGIN_REFRESH;
+const API_REGISTER = import.meta.env.VITE_API_REGISTER;
+
 export const AuthProvider = ({children}) => {
     const [authTokens, setAuthTokens] = useState(() =>
         localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null)
@@ -9,7 +13,7 @@ export const AuthProvider = ({children}) => {
     useEffect(() => {
         const refreshToken = async () => {
             try {
-                const response = await axios.post("http://localhost:8000/api/login/refresh/", {
+                const response = await axios.post(API_LOGIN_REFRESH, {
                     refresh: authTokens.refresh
                 })
 
@@ -37,7 +41,7 @@ export const AuthProvider = ({children}) => {
 
     const signupUser = async (email, password, password2, firstName, lastName) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/register/', {
+            const response = await axios.post(API_LOGIN_REFRESH, {
                 email,
                 password,
                 password2,
@@ -54,7 +58,7 @@ export const AuthProvider = ({children}) => {
 
     const loginUser = async (email, password) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/login/',
+            const response = await axios.post(API_LOGIN,
                 {email, password})
             setAuthTokens(response.data)
             localStorage.setItem('authTokens', JSON.stringify(response.data))

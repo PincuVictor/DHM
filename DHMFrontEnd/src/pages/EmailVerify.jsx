@@ -1,6 +1,8 @@
-import {Link, useParams} from "react-router";
+import {Link, useParams} from "react-router-dom";
 import {useEffect, useRef, useState} from "react";
 import axios from "axios";
+
+const API_VERIFY_EMAIL = import.meta.env.VITE_API_VERIFY_EMAIL;
 
 export default function EmailVerify() {
     const {uidb64, token} = useParams()
@@ -10,9 +12,9 @@ export default function EmailVerify() {
 
     useEffect(() => {
         if (called.current) return
-            called.current = true
+        called.current = true
         axios
-            .get(`http://localhost:8000/verify-email/${uidb64}/${token}/`)
+            .get(`${API_VERIFY_EMAIL}${uidb64}/${token}/`)
             .then(() => {
                 setSuccess(true)
                 setMessage("Email verified successfully! You can now log in.")

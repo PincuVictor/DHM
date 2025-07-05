@@ -1,9 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react'
 import '../stylesheets/Account.css'
-import {Link} from "react-router"
+import {Link} from "react-router-dom"
 import AuthContext from "../components/AuthContext.jsx"
 import {FaEdit, FaTrash} from "react-icons/fa"
 
+const API_CREDENTIALS = import.meta.env.VITE_API_CREDENTIALS
+const API_SHIPPING = import.meta.env.VITE_API_SHIPPING
 
 function Account() {
     const [isEditing, setIsEditing] = useState(false);
@@ -17,27 +19,30 @@ function Account() {
         address_line2: '',
         city: '',
         postal_code: '',
-        country: ''}])
+        country: ''
+    }])
     const [shippingAddressNew, setShippingAddressNew] = useState([{
         address_line1: '',
         address_line2: '',
         city: '',
         postal_code: '',
-        country: ''}])
+        country: ''
+    }])
     const [contact, setContact] = useState(false)
     const {logoutUser} = useContext(AuthContext)
     const [error, setError] = useState('')
     const [credentials, setCredentials] = useState({
         email: '',
         first_name: '',
-        last_name: ''})
+        last_name: ''
+    })
 
     const handleSubmitAddress = async (e) => {
         e.preventDefault()
         const token = JSON.parse(localStorage.getItem('authTokens'))
         if (!token) return
         const method = isEditing ? 'PUT' : 'POST'
-        const url = isEditing ? `http://localhost:8000/api/shipping/${editAddressId}/` : 'http://localhost:8000/api/shipping/'
+        const url = isEditing ? `${API_SHIPPING}${editAddressId}/` : API_SHIPPING
         fetch(url, {
             method,
             headers: {
@@ -55,7 +60,8 @@ function Account() {
                     address_line2: '',
                     city: '',
                     postal_code: '',
-                    country: ''}]))
+                    country: ''
+                }]))
                 fetchShipping()
                 setActive(true)
             })
@@ -68,7 +74,7 @@ function Account() {
 
         if (!window.confirm("Are you sure you want to delete this address?")) return;
 
-        fetch(`http://localhost:8000/api/shipping/${id}/`, {
+        fetch(`${API_SHIPPING}${id}/`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token.access}`,
@@ -101,7 +107,7 @@ function Account() {
         const token = JSON.parse(localStorage.getItem('authTokens'))
         if (!token) return
 
-        fetch('http://localhost:8000/api/credentials/', {
+        fetch(API_CREDENTIALS, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -119,7 +125,7 @@ function Account() {
         const token = JSON.parse(localStorage.getItem('authTokens'))
         if (!token) return
 
-        fetch('http://localhost:8000/api/shipping/', {
+        fetch(API_SHIPPING, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -143,154 +149,181 @@ function Account() {
             <div className={'barAccount'}>
                 <ul className={'barAccount-items'}>
                     <li>
-                        <Link to={'#'} onClick={() => {setInfo(true)
+                        <Link to={'#'} onClick={() => {
+                            setInfo(true)
                             setOrders(false)
                             setShipping(false)
-                            setContact(false)}}>
+                            setContact(false)
+                        }}>
                             INFO
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'} onClick={() => {setOrders(true)
+                        <Link to={'#'} onClick={() => {
+                            setOrders(true)
                             setInfo(false)
                             setShipping(false)
-                            setContact(false)}}>
+                            setContact(false)
+                        }}>
                             ORDERS
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'} onClick={() => {setShipping(true)
+                        <Link to={'#'} onClick={() => {
+                            setShipping(true)
                             setInfo(false)
                             setOrders(false)
-                            setContact(false)}}>
+                            setContact(false)
+                        }}>
                             SHIPPING
                         </Link>
                     </li>
                     <li>
-                        <Link to={'#'} onClick={() => {setContact(true)
+                        <Link to={'#'} onClick={() => {
+                            setContact(true)
                             setInfo(false)
                             setOrders(false)
-                            setShipping(false)}}>
+                            setShipping(false)
+                        }}>
                             CONTACT
                         </Link>
                     </li>
                 </ul>
             </div>
             <div className={'contentContainerAccount'}>
-                <div className={'heading'}> ACCOUNT </div>
+                <div className={'heading'}> ACCOUNT</div>
                 {JSON.parse(localStorage.getItem("authTokens")) ?
                     <>
-                    <div className={'contentAccount'}>
-                        {info && <div>
-                            <div>EMAIL: {credentials.email}</div>
-                            <div>FULL NAME: {credentials.first_name + ' ' + credentials.last_name}</div>
-                        </div>}
-                        {orders && <div>ORDERS</div>}
-                        {shipping &&
-                            <div className={'shippingAddress'}>
-                                {active &&
-                                <ul className={'shippingAddressItems'}>
-                                    {shippingAddress.map((address, index) => (
+                        <div className={'contentAccount'}>
+                            {info && <div>
+                                <div>EMAIL: {credentials.email}</div>
+                                <div>FULL NAME: {credentials.first_name + ' ' + credentials.last_name}</div>
+                            </div>}
+                            {orders && <div>ORDERS</div>}
+                            {shipping &&
+                                <div className={'shippingAddress'}>
+                                    {active &&
+                                        <ul className={'shippingAddressItems'}>
+                                            {shippingAddress.map((address, index) => (
 
-                                        <li key={index}>
-                                            <p>SHIPPING ADDRESS {index + 1}
-                                                <FaEdit onClick={() => {
-                                                    const selected = shippingAddress[index]
-                                                    setShippingAddressNew(selected)
-                                                    setEditAddressId(selected.id)
-                                                    setIsEditing(true)
-                                                    setActive(false)
-                                                }}/>
-                                                <FaTrash onClick={() => handleDeleteAddress(shippingAddress[index].id)}
-                                                         style={{ marginLeft: "10px", color: "red", cursor: "pointer" }}/>
-                                            </p>
-                                            {address.address_line1}, {address.postal_code}, {address.city}, {address.country}
-                                        </li>
-                                    ))}
-                                </ul>}
-                                {!active &&
-                                <form className={'shippingAddressForm'} onSubmit={handleSubmitAddress}>
-                                    <input
-                                        id="address_line1"
-                                        type="text"
-                                        placeholder="Address Line 1"
-                                        value={shippingAddressNew.address_line1}
-                                        onChange={e => {setShippingAddressNew({
-                                            ...shippingAddressNew,
-                                            address_line1: e.target.value
-                                        })}}
-                                        required
-                                    />
-                                    <input
-                                        id="address_line2"
-                                        type="text"
-                                        placeholder="Address Line 2"
-                                        value={shippingAddressNew.address_line2}
-                                        onChange={e => {setShippingAddressNew({
-                                            ...shippingAddressNew,
-                                            address_line2: e.target.value
-                                        })}}
-                                    />
-                                    <input
-                                    id="postal_code"
-                                    type="text"
-                                    placeholder="Postal Code"
-                                    value={shippingAddressNew.postal_code}
-                                    onChange={e => {setShippingAddressNew({
-                                        ...shippingAddressNew,
-                                        postal_code: e.target.value
-                                    })}}
-                                    required
-                                    />
-                                    <input
-                                        id="city"
-                                        type="text"
-                                        placeholder="City"
-                                        value={shippingAddressNew.city}
-                                        onChange={e => {setShippingAddressNew({
-                                            ...shippingAddressNew,
-                                            city: e.target.value
-                                        })}}
-                                        required
-                                    />
-                                    <input
-                                        id="country"
-                                        type="text"
-                                        placeholder="Country"
-                                        value={shippingAddressNew.country}
-                                        onChange={e => {setShippingAddressNew({
-                                            ...shippingAddressNew,
-                                            country: e.target.value
-                                        })}}
-                                        required
-                                    />
-                                    <button type="submit">SUBMIT</button>
-                                    {isEditing && (
-                                        <button type="button" onClick={() => {
-                                            setIsEditing(false);
-                                            setEditAddressId(null);
-                                            setShippingAddressNew({
-                                                address_line1: '',
-                                                address_line2: '',
-                                                city: '',
-                                                postal_code: '',
-                                                country: ''
-                                            });
-                                            setActive(true);
+                                                <li key={index}>
+                                                    <p>SHIPPING ADDRESS {index + 1}
+                                                        <FaEdit onClick={() => {
+                                                            const selected = shippingAddress[index]
+                                                            setShippingAddressNew(selected)
+                                                            setEditAddressId(selected.id)
+                                                            setIsEditing(true)
+                                                            setActive(false)
+                                                        }}/>
+                                                        <FaTrash
+                                                            onClick={() => handleDeleteAddress(shippingAddress[index].id)}
+                                                            style={{
+                                                                marginLeft: "10px",
+                                                                color: "red",
+                                                                cursor: "pointer"
+                                                            }}/>
+                                                    </p>
+                                                    {address.address_line1}, {address.postal_code}, {address.city}, {address.country}
+                                                </li>
+                                            ))}
+                                        </ul>}
+                                    {!active &&
+                                        <form className={'shippingAddressForm'} onSubmit={handleSubmitAddress}>
+                                            <input
+                                                id="address_line1"
+                                                type="text"
+                                                placeholder="Address Line 1"
+                                                value={shippingAddressNew.address_line1}
+                                                onChange={e => {
+                                                    setShippingAddressNew({
+                                                        ...shippingAddressNew,
+                                                        address_line1: e.target.value
+                                                    })
+                                                }}
+                                                required
+                                            />
+                                            <input
+                                                id="address_line2"
+                                                type="text"
+                                                placeholder="Address Line 2"
+                                                value={shippingAddressNew.address_line2}
+                                                onChange={e => {
+                                                    setShippingAddressNew({
+                                                        ...shippingAddressNew,
+                                                        address_line2: e.target.value
+                                                    })
+                                                }}
+                                            />
+                                            <input
+                                                id="postal_code"
+                                                type="text"
+                                                placeholder="Postal Code"
+                                                value={shippingAddressNew.postal_code}
+                                                onChange={e => {
+                                                    setShippingAddressNew({
+                                                        ...shippingAddressNew,
+                                                        postal_code: e.target.value
+                                                    })
+                                                }}
+                                                required
+                                            />
+                                            <input
+                                                id="city"
+                                                type="text"
+                                                placeholder="City"
+                                                value={shippingAddressNew.city}
+                                                onChange={e => {
+                                                    setShippingAddressNew({
+                                                        ...shippingAddressNew,
+                                                        city: e.target.value
+                                                    })
+                                                }}
+                                                required
+                                            />
+                                            <input
+                                                id="country"
+                                                type="text"
+                                                placeholder="Country"
+                                                value={shippingAddressNew.country}
+                                                onChange={e => {
+                                                    setShippingAddressNew({
+                                                        ...shippingAddressNew,
+                                                        country: e.target.value
+                                                    })
+                                                }}
+                                                required
+                                            />
+                                            <button type="submit">SUBMIT</button>
+                                            {isEditing && (
+                                                <button type="button" onClick={() => {
+                                                    setIsEditing(false);
+                                                    setEditAddressId(null);
+                                                    setShippingAddressNew({
+                                                        address_line1: '',
+                                                        address_line2: '',
+                                                        city: '',
+                                                        postal_code: '',
+                                                        country: ''
+                                                    });
+                                                    setActive(true);
+                                                }}>
+                                                    CANCEL EDIT
+                                                </button>
+                                            )}
+                                        </form>}
+                                    {shippingAddress.length < 5 && !isEditing && (
+                                        <button onClick={() => {
+                                            setActive(!active)
                                         }}>
-                                            CANCEL EDIT
+                                            {active ? 'ADD SHIPPING ADDRESS' : 'BACK'}
                                         </button>
                                     )}
-                                </form>}
-                                {shippingAddress.length < 5 && !isEditing && (
-                                    <button onClick={() => {setActive(!active)}}>
-                                        {active ? 'ADD SHIPPING ADDRESS' : 'BACK'}
-                                    </button>
-                                )}
-                            </div>}
-                        {contact && <div>FOR ANY PROBLEMS OR INQUIRIES EMAIL dhm.clothing.official@gmail.com</div>}
-                    </div>
-                    <div  className={'logoutButton'} ><button onClick={handleSubmitLogout}>LOGOUT</button></div>
+                                </div>}
+                            {contact && <div>FOR ANY PROBLEMS OR INQUIRIES EMAIL dhm.clothing.official@gmail.com</div>}
+                        </div>
+                        <div className={'logoutButton'}>
+                            <button onClick={handleSubmitLogout}>LOGOUT</button>
+                        </div>
                     </> :
                     <div className={'loginLink'}>You are currently not logged in:<Link to={'/login'}>LOGIN</Link></div>}
             </div>

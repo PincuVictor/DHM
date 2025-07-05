@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import AuthContext from "../components/AuthContext.jsx";
 import '../stylesheets/Signup.css'
-import {Link} from "react-router";
+import {Link} from "react-router-dom";
 
 function Signup() {
     const [email, setEmail] = useState('')

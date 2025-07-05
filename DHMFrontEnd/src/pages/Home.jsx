@@ -7,7 +7,7 @@ function getTimeRemaining(targetDate) {
     const minutes = Math.floor((total / 1000 / 60) % 60)
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24)
     const days = Math.floor(total / (1000 * 60 * 60 * 24))
-    return { total, days, hours, minutes, seconds }
+    return {total, days, hours, minutes, seconds}
 }
 
 const Countdown = ({targetDate}) => {
@@ -16,7 +16,7 @@ const Countdown = ({targetDate}) => {
         const Interval = setInterval(() => {
             const remaining = getTimeRemaining(targetDate)
             setTimeLeft(remaining)
-            if( remaining.total <= 0 ) {
+            if (remaining.total <= 0) {
                 clearInterval(Interval)
             }
         }, 1000)

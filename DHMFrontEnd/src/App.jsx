@@ -1,57 +1,65 @@
-import React from 'react'
+import {lazy, Suspense} from 'react'
 import './App.css'
-import {Link, Navigate, Route, Routes} from 'react-router'
-import Home from './pages/Home'
-import Navbar from './components/Navbar'
-import {AuthProvider} from "./components/AuthProvider.jsx";
-import Login from "./pages/Login.jsx";
-import Account from "./pages/Account.jsx";
-import Signup from "./pages/Signup.jsx";
-import EmailVerify from "./pages/EmailVerify.jsx"
+import {Route, Routes} from 'react-router-dom'
+import {AuthProvider} from "./components/AuthProvider.jsx"
+
+
+const Login = lazy(() => import('./pages/Login.jsx'));
+const Signup = lazy(() => import('./pages/Signup.jsx'));
+const Navbar = lazy(() => import('./components/Navbar.jsx'));
+const Account = lazy(() => import('./pages/Account.jsx'));
+const Home = lazy(() => import('./pages/Home.jsx'));
+const EmailVerify = lazy(() => import('./pages/EmailVerify.jsx'));
+const NotFound = lazy(() => import('./pages/NotFound.jsx'));
+
 
 function App() {
     return (
         <>
             <AuthProvider>
-                <Routes>
-                    <Route path="/" element={
-                        <>
-                            <Navbar/>
-                            <Home/>
-                        </>
-                    }/>
-                    <Route path="/drop" element={
-                        <>
-                            <Navbar/>
-                            <Home/>
-                        </>
-                    }/>
-                    <Route path="/contact" element={
-                        <>
-                            <Navbar/>
-                            <Home/>
-                        </>
-                    }/>
-                    <Route path="/account" element={
-                        <>
-                            <Navbar/>
-                            <Account/>
-                        </>
-                    }/>
-                    <Route path="/login" element={
-                        <>
-                            <Login/>
-                        </>
-                    }/>
-                    <Route path="/signup" element={
-                        <>
-                            <Signup/>
-                        </>
-                    }/>
-                    <Route path="/verify-email/:uidb64/:token" element={<EmailVerify />} />
-                </Routes>
+                <Suspense fallback={<div> Loading... </div>}>
+                    <Routes>
+                        <Route path="/" element={
+                            <>
+                                <Navbar/>
+                                <Home/>
+                            </>
+                        }/>
+                        <Route path="/drop" element={
+                            <>
+                                <Navbar/>
+                                <Home/>
+                            </>
+                        }/>
+                        <Route path="/contact" element={
+                            <>
+                                <Navbar/>
+                                <Home/>
+                            </>
+                        }/>
+                        <Route path="/account" element={
+                            <>
+                                <Navbar/>
+                                <Account/>
+                            </>
+                        }/>
+                        <Route path="/login" element={
+                                <Login/>
+                        }/>
+                        <Route path="/signup" element={
+                                <Signup/>
+                        }/>
+                        <Route path="/verify-email/:uidb64/:token" element={
+                            <EmailVerify/>
+                        }/>
+                        <Route path="*" element={
+                            <NotFound/>
+                        }/>
+                    </Routes>
+                </Suspense>
             </AuthProvider>
         </>
     )
 }
+
 export default App

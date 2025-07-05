@@ -19,12 +19,12 @@
     padding: 0;
 }
 
-.navbar-items a{
+.navbar-items a {
     text-decoration: none;
     color: #fff;
 }
 
-.navbar-items a:hover{
+.navbar-items a:hover {
     color: #ff0000;
 }
 
