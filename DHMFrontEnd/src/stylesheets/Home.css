@@ -1,0 +1,27 @@
+.home {
+    padding-top: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Oxanium', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainHome {
+    font-size: 5vw;
+    padding-bottom: 5vw;
+}
+
+.time {
+    font-size: 3vw;
+    padding-bottom: 5vw;
+}
+
+.countdown {
+    font-size: 3vw;
+}
+
+html, body {
+    overflow-y: clip
+}

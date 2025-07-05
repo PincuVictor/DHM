@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Hi {{ user.first_name }},</h2>
+    <br/>
+    <p>Thank you for signing up to be a part of the DHM family.</p>
+    <br/>
+    <p>Please confirm your email address by clicking the link below:</p>
+    <br/>
+    <p>
+        <a href="{{ activation_link }}" style="padding: 10px 20px; background-color: #28a745; color: white;
+          text-decoration: none; border-radius: 5px; display: inline-block;">
+          Verify Email
+        </a>
+    </p>
+    <p>If you did not sign up for DHM, please ignore this email.</p>
+</body>
+</html>

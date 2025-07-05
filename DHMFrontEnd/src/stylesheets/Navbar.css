@@ -1,0 +1,167 @@
+.navbar {
+    position: fixed;
+    background-color: #000;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-items a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-items a:hover{
+    color: #ff0000;
+}
+
+.fill-text {
+    background-color: #8e1919;
+    align-items: center;
+    display: flex;
+    width: 200vw;
+    height: 10vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    white-space: pre;
+    pointer-events: none;
+}
+
+.logo {
+    width: 6%;
+    margin-top: -3%;
+}
+
+.cart {
+    width: 3%;
+    margin-top: -1%;
+    fill: white;
+}
+
+
+.rotate1 {
+    transform: rotate(-35deg);
+}
+
+.rotate2 {
+    transform: rotate(40deg);
+}
+
+.rotate3 {
+    transform: rotate(15deg);
+}
+
+@keyframes slide-in-left {
+    from {
+        translate: -300vw 250vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: -100vw -45vh;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide-in-top {
+    from {
+        translate: 30vw 170vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: -60vw 50vh;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        translate: 100vw 100vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: -100vw 10vh;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        translate: -100vw -45vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: -300vw 250vh;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide-out-top {
+    from {
+        translate: -60vw 50vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: 30vw 170vh;
+        scale: 100% 1;
+    }
+}
+
+@keyframes slide-out-right {
+    from {
+        translate: -100vw 10vh;
+        scale: 100% 1;
+    }
+    to {
+        translate: 100vw 100vh;
+        scale: 100% 1;
+    }
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.3s forwards;
+    opacity: 1;
+}
+
+.slide-out-left {
+    animation: slide-out-left 0.3s forwards;
+    opacity: 1;
+}
+
+.slide-in-top {
+    animation: slide-in-top 0.5s forwards;
+    opacity: 1;
+}
+
+.slide-out-top {
+    animation: slide-out-top 0.5s forwards;
+    opacity: 1;
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.7s forwards;
+    opacity: 1;
+}
+
+.slide-out-right {
+    animation: slide-out-right 0.7s forwards;
+    opacity: 1;
+}
+
+html, body {
+    overflow-x: clip
+}
