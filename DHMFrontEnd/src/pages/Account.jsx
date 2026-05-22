@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import '../stylesheets/Account.css'
 import {Link} from "react-router-dom"
-import AuthContext from "../components/AuthContext.jsx"
+import { useAuth } from "../hooks/useAuth.jsx"
 import {FaEdit, FaTrash} from "react-icons/fa"
 
 const API_CREDENTIALS = import.meta.env.VITE_API_CREDENTIALS
@@ -29,7 +29,7 @@ function Account() {
         country: ''
     }])
     const [contact, setContact] = useState(false)
-    const {logoutUser} = useContext(AuthContext)
+    const {logoutUser} = useAuth()
     const [error, setError] = useState('')
     const [credentials, setCredentials] = useState({
         email: '',
@@ -47,7 +47,7 @@ function Account() {
             method,
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token.access}`,
+                'Authorization': `Bearer ${token.token}`,
             },
             body: JSON.stringify(shippingAddressNew)
         })
@@ -77,7 +77,7 @@ function Account() {
         fetch(`${API_SHIPPING}${id}/`, {
             method: 'DELETE',
             headers: {
-                'Authorization': `Bearer ${token.access}`,
+                'Authorization': `Bearer ${token.token}`,
             },
         })
             .then((res) => {
@@ -105,20 +105,13 @@ function Account() {
 
     const fetchCredentials = () => {
         const token = JSON.parse(localStorage.getItem('authTokens'))
-        if (!token) return
+        if (!token || !token.user) return
 
-        fetch(API_CREDENTIALS, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token.access}`,
-            },
+        setCredentials({
+            email: token.user.email,
+            first_name: token.user.firstName,
+            last_name: token.user.lastName
         })
-            .then((res) => res.json())
-            .then((data) => {
-                setCredentials(data)
-            })
-            .catch((err) => console.error('Error fetching credentials:', err))
     }
 
     const fetchShipping = () => {
@@ -129,7 +122,7 @@ function Account() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token.access}`,
+                'Authorization': `Bearer ${token.token}`,
             },
         })
             .then((res) => res.json())

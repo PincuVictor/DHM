@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import AuthContext from "../components/AuthContext.jsx";
+import { useAuth } from "../hooks/useAuth.jsx";
 import '../stylesheets/Signup.css'
 import {Link} from "react-router-dom";
 
@@ -9,31 +9,33 @@ function Signup() {
     const [password2, setPassword2] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const {signupUser} = useContext(AuthContext)
+    const {signupUser} = useAuth()
     const [error, setError] = useState(false)
     const [errorMsg, setErrorMsg] = useState('')
     const [success, setSuccess] = useState(false)
 
     const handleSubmitSignup = async (e) => {
         e.preventDefault()
+        if (password !== password2) {
+            setError(true);
+            setErrorMsg("Passwords do not match.");
+            return;
+        }
+
         const result = await signupUser(email, password, password2, firstName, lastName);
 
-        setSuccess(result);
-        setError(!result);
+        setSuccess(result.success);
+        setError(!result.success);
 
-        if (result) {
+        if (result.success) {
             setEmail('');
             setPassword('');
             setPassword2('');
             setFirstName('');
             setLastName('');
+        } else {
+            setErrorMsg(result.error || "Signup failed. Please check your input or try again.");
         }
-
-        if (!result) {
-            setErrorMsg("Signup failed. Please check your input or try again.");
-            setError(true);
-        }
-
     }
 
     return (

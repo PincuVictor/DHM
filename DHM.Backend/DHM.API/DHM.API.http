@@ -1,0 +1,6 @@
+@DHM.API_HostAddress = http://localhost:5090
+
+GET {{DHM.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

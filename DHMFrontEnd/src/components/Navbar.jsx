@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from "react-router"
+import {Link, useNavigate} from "react-router-dom"
 import '../stylesheets/Navbar.css'
 import {ReactComponent as Logo} from "../assets/logo1.svg"
-import {ReactComponent as Cart} from "../assets/shopping-cart.svg"
+import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg"
+import { useCart } from '../hooks/useCart'
 
 const FillText = ({text, hovered}) => {
     const [fillText, setFillText] = useState("")
@@ -47,16 +48,36 @@ const AnimatedHover = ({link, linkText, text}) => {
 }
 
 function Navbar() {
+    const { cartCount } = useCart();
+    const navigate = useNavigate();
+
     return (
         <div className={'container'}>
             <div className={'navbar'}>
                 <ul className={'navbar-items'}>
-                    <Logo className={'logo'}/>
+                    <Logo className={'logo'} onClick={() => navigate('/')} style={{cursor: 'pointer'}}/>
                     <AnimatedHover link={'/'} linkText={'HOME'} text={'HOME       '}/>
                     <AnimatedHover link={'/drop'} linkText={'DROP'} text={'DROP          '}/>
-                    <AnimatedHover link={'/store'} linkText={'STORE'} text={'STORE       '}/>
+                    <AnimatedHover link={'/shop'} linkText={'SHOP'} text={'SHOP       '}/>
                     <AnimatedHover link={'/account'} linkText={'ACCOUNT'} text={'ACCOUNT       '}/>
-                    <Cart className={'cart'}/>
+                    <li className="cart-container" onClick={() => navigate('/cart')} style={{cursor: 'pointer', position: 'relative'}}>
+                        <CartIcon className={'cart'}/>
+                        {cartCount > 0 && (
+                            <span style={{
+                                position: 'absolute',
+                                top: '-5px',
+                                right: '-10px',
+                                background: '#646cff',
+                                color: '#fff',
+                                borderRadius: '50%',
+                                padding: '2px 6px',
+                                fontSize: '0.8rem',
+                                fontWeight: 'bold'
+                            }}>
+                                {cartCount}
+                            </span>
+                        )}
+                    </li>
                 </ul>
             </div>
         </div>

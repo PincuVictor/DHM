@@ -1,0 +1,13 @@
+D:\DHM\DHM.Backend\DHM.Domain\bin\Debug\net9.0\DHM.Domain.deps.json
+D:\DHM\DHM.Backend\DHM.Domain\bin\Debug\net9.0\DHM.Domain.dll
+D:\DHM\DHM.Backend\DHM.Domain\bin\Debug\net9.0\DHM.Domain.pdb
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.csproj.AssemblyReference.cache
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.AssemblyInfoInputs.cache
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.AssemblyInfo.cs
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.csproj.CoreCompileInputs.cache
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.sourcelink.json
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.dll
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\refint\DHM.Domain.dll
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\DHM.Domain.pdb
+D:\DHM\DHM.Backend\DHM.Domain\obj\Debug\net9.0\ref\DHM.Domain.dll
