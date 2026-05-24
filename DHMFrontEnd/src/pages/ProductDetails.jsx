@@ -67,6 +67,7 @@ const ProductDetails = () => {
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.5 }}
+                        onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/600?text=No+Image"; }}
                     />
                 ) : (
                     <img src="https://via.placeholder.com/600?text=No+Image" alt="Placeholder" className={styles.productImage} />
@@ -82,15 +83,22 @@ const ProductDetails = () => {
                     {product.description || "No description available for this product."}
                 </p>
 
-                <motion.button 
-                    className={styles.addToCartBtn}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleAddToCart}
-                    disabled={adding}
-                >
-                    {adding ? 'Adding...' : 'Add to Cart'}
-                </motion.button>
+                {product.releaseDate && new Date(product.releaseDate) > new Date() ? (
+                    <div className={styles.comingSoon}>
+                        <h3>DROPPING SOON</h3>
+                        <p>{new Date(product.releaseDate).toLocaleString()}</p>
+                    </div>
+                ) : (
+                    <motion.button 
+                        className={styles.addToCartBtn}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={handleAddToCart}
+                        disabled={adding}
+                    >
+                        {adding ? 'Adding...' : 'Add to Cart'}
+                    </motion.button>
+                )}
             </div>
         </motion.div>
     );

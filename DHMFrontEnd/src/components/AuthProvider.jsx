@@ -55,9 +55,29 @@ export const AuthProvider = ({children}) => {
         localStorage.removeItem('authTokens')
     }
 
+    const verifyUser = async (email, code) => {
+        try {
+            const response = await axios.post('http://localhost:5090/api/Auth/verify', { email, code })
+            setAuthTokens(response.data)
+            localStorage.setItem('authTokens', JSON.stringify(response.data))
+            console.log(response.data)
+            return { success: true }
+        } catch (error) {
+            let errorMsg = 'Verification failed';
+            if (error.response && error.response.data) {
+                errorMsg = error.response.data.Detailed || error.response.data.Message || error.response.data.message || error.response.data.title || errorMsg;
+            } else {
+                errorMsg = error.message;
+            }
+            console.error('Verification failed:', errorMsg);
+            return { success: false, error: errorMsg }
+        }
+    }
+
     const contextData = {
         authTokens,
         signupUser,
+        verifyUser,
         loginUser,
         logoutUser
     }

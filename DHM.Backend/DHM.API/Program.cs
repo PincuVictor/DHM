@@ -52,6 +52,7 @@ builder.Services.AddScoped<DHM.Application.Interfaces.Services.ICategoryService,
 builder.Services.AddScoped<DHM.Application.Interfaces.Services.IOrderService, DHM.Infrastructure.Services.OrderService>();
 builder.Services.AddScoped<DHM.Application.Interfaces.Services.ICartService, DHM.Infrastructure.Services.CartService>();
 builder.Services.AddScoped<DHM.Application.Interfaces.Services.IEmailService, DHM.Infrastructure.Services.EmailService>();
+builder.Services.AddScoped<DHM.Application.Interfaces.Services.IShippingService, DHM.Infrastructure.Services.ShippingService>();
 
 // Add Identity
 builder.Services.AddIdentity<User, IdentityRole>()

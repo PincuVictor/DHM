@@ -9,6 +9,7 @@ namespace DHM.Domain.Entities
         public int StockQuantity { get; set; }
         public decimal Price { get; set; }
         public string? ImageUrl { get; set; }
+        public DateTime? ReleaseDate { get; set; }
         public bool IsActive { get; set; } = true;
 
         public int CategoryId { get; set; }

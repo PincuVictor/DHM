@@ -9,6 +9,7 @@ const Signup = lazy(() => import('./pages/Signup.jsx'));
 const Navbar = lazy(() => import('./components/Navbar.jsx'));
 const Account = lazy(() => import('./pages/Account.jsx'));
 const Home = lazy(() => import('./pages/Home.jsx'));
+const Drop = lazy(() => import('./pages/Drop.jsx'));
 const EmailVerify = lazy(() => import('./pages/EmailVerify.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 const Shop = lazy(() => import('./pages/Shop.jsx'));
@@ -32,7 +33,7 @@ function App() {
                                 <Route path="/product/:id" element={<ProductDetails />} />
                                 <Route path="/cart" element={<Cart />} />
                                 <Route path="/checkout" element={<Checkout />} />
-                                <Route path="/drop" element={<Home />} />
+                                <Route path="/drop" element={<Drop />} />
                                 <Route path="/contact" element={<Home />} />
                                 <Route path="/account" element={<Account />} />
                             </Route>

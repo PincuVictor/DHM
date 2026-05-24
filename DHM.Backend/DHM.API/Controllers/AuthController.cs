@@ -31,6 +31,20 @@ namespace DHM.API.Controllers
             }
         }
 
+        [HttpPost("verify")]
+        public async Task<IActionResult> Verify(VerifyDto request)
+        {
+            try
+            {
+                var result = await _authService.VerifyAsync(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto request)
         {

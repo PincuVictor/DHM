@@ -9,10 +9,12 @@ function Signup() {
     const [password2, setPassword2] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const {signupUser} = useAuth()
+    const [verificationCode, setVerificationCode] = useState('')
+    const {signupUser, verifyUser} = useAuth()
     const [error, setError] = useState(false)
     const [errorMsg, setErrorMsg] = useState('')
     const [success, setSuccess] = useState(false)
+    const [needsVerification, setNeedsVerification] = useState(false)
 
     const handleSubmitSignup = async (e) => {
         e.preventDefault()
@@ -24,70 +26,61 @@ function Signup() {
 
         const result = await signupUser(email, password, password2, firstName, lastName);
 
-        setSuccess(result.success);
-        setError(!result.success);
-
         if (result.success) {
-            setEmail('');
-            setPassword('');
-            setPassword2('');
-            setFirstName('');
-            setLastName('');
+            setNeedsVerification(true)
+            setSuccess(true)
+            setError(false)
         } else {
+            setError(true)
             setErrorMsg(result.error || "Signup failed. Please check your input or try again.");
+        }
+    }
+
+    const handleVerifySubmit = async (e) => {
+        e.preventDefault()
+        const result = await verifyUser(email, verificationCode);
+        
+        if (result.success) {
+            window.location.href = '/' // redirect to home on success
+        } else {
+            setError(true)
+            setErrorMsg(result.error || "Verification failed.");
         }
     }
 
     return (
         <div className={'signupPage'}>
             <div className={'signupContainer'}>
-                <h2>SIGN UP</h2>
-                <form onSubmit={handleSubmitSignup} autoComplete={'off'} className={'signupForm'}>
-                    <input
-                        id="email"
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        required
-                    />
-                    <input
-                        id="password"
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        required
-                    />
-                    <input
-                        id="password2"
-                        type="password"
-                        placeholder="Confirm Password"
-                        value={password2}
-                        onChange={e => setPassword2(e.target.value)}
-                        required
-                    />
-                    <input
-                        id="firstName"
-                        type="text"
-                        placeholder="First Name"
-                        value={firstName}
-                        onChange={e => setFirstName(e.target.value)}
-                        required
-                    />
-                    <input
-                        id="lastName"
-                        type="text"
-                        placeholder="Last Name"
-                        value={lastName}
-                        onChange={e => setLastName(e.target.value)}
-                        required
-                    />
-                    <button type="submit">SUBMIT</button>
-                    {error && <p style={{color: 'red'}}>{errorMsg}</p>}
-                    {success && <p style={{color: 'green'}}>You have been sent a confirmation email</p>}
-                </form>
-                <p>Already have an account? <Link to={'/login'}>Login</Link></p>
+                <h2>{needsVerification ? "VERIFY EMAIL" : "SIGN UP"}</h2>
+                
+                {!needsVerification ? (
+                    <form onSubmit={handleSubmitSignup} autoComplete={'off'} className={'signupForm'}>
+                        <input id="email" type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
+                        <input id="password" type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
+                        <input id="password2" type="password" placeholder="Confirm Password" value={password2} onChange={e => setPassword2(e.target.value)} required />
+                        <input id="firstName" type="text" placeholder="First Name" value={firstName} onChange={e => setFirstName(e.target.value)} required />
+                        <input id="lastName" type="text" placeholder="Last Name" value={lastName} onChange={e => setLastName(e.target.value)} required />
+                        <button type="submit">SUBMIT</button>
+                        {error && <p style={{color: 'red'}}>{errorMsg}</p>}
+                    </form>
+                ) : (
+                    <form onSubmit={handleVerifySubmit} autoComplete={'off'} className={'signupForm'}>
+                        <p style={{color: '#fff', marginBottom: '15px'}}>Please enter the 6-digit code sent to your email.</p>
+                        <input 
+                            id="verificationCode" 
+                            type="text" 
+                            placeholder="6-digit code" 
+                            value={verificationCode} 
+                            onChange={e => setVerificationCode(e.target.value)} 
+                            required 
+                            maxLength={6}
+                        />
+                        <button type="submit">VERIFY</button>
+                        {error && <p style={{color: 'red'}}>{errorMsg}</p>}
+                    </form>
+                )}
+
+                {!needsVerification && <p>Already have an account? <Link to={'/login'}>Login</Link></p>}
                 <p>Go back <Link to={'/'}>HOME</Link></p>
             </div>
         </div>

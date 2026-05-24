@@ -1,24 +1,69 @@
-.home {
-    padding-top: 10vw;
+.home-container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 80vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.hero-section {
+    display: flex;
     flex-direction: column;
-    font-family: 'Oxanium', sans-serif;
-    width: 100vw;
-    height: 100vh;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
-.mainHome {
-    font-size: 5vw;
-    padding-bottom: 5vw;
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+    background: linear-gradient(to right, #fff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.time {
-    font-size: 3vw;
-    padding-bottom: 5vw;
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
-.countdown {
-    font-size: 3vw;
+.hero-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
-
+
+.hero-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}

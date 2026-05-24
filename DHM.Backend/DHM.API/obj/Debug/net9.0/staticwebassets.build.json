@@ -1,12 +1,331 @@
 {
   "Version": 1,
-  "Hash": "ShJe1ndIl234zZ3tmj3CpBExTHdLzHGlJPtr31E60Tk=",
+  "Hash": "5iXTgRh0Q27NGyRrpJH0WJ0Cdbt5sZoWeqx9SLhaYBU=",
   "Source": "DHM.API",
   "BasePath": "_content/DHM.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "DHM.API\\wwwroot",
+      "Source": "DHM.API",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/bingu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nr8q4fkxse",
+      "Integrity": "HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\bingu.jpg"
+    },
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/gantofu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1wnkdknb93",
+      "Integrity": "8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\gantofu.jpg"
+    },
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/sdingu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "55rt61ruzf",
+      "Integrity": "qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\sdingu.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/products/bingu.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/bingu.nr8q4fkxse.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nr8q4fkxse"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/bingu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/gantofu.1wnkdknb93.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8517"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1wnkdknb93"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/gantofu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/gantofu.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8517"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/sdingu.55rt61ruzf.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "55rt61ruzf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/sdingu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/sdingu.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 24 May 2026 15:08:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8="
+        }
+      ]
+    }
+  ]
 }

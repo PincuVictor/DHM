@@ -33,6 +33,16 @@ namespace DHM.Infrastructure.Services
 
         public async Task<CartDto> AddItemToCartAsync(string userId, int productId, int quantity)
         {
+            var product = await _context.Products.FindAsync(productId);
+            if (product == null)
+            {
+                throw new System.Exception("Product not found");
+            }
+            if (product.ReleaseDate.HasValue && product.ReleaseDate.Value > System.DateTime.UtcNow)
+            {
+                throw new System.Exception("Cannot add an upcoming drop to the cart before its release date");
+            }
+
             var cart = await _context.Carts
                 .Include(c => c.CartItems)
                 .FirstOrDefaultAsync(c => c.UserId == userId);

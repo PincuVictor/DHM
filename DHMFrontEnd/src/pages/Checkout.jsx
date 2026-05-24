@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useCart } from '../hooks/useCart';
+import { useAuth } from '../hooks/useAuth';
+import axios from 'axios';
 import styles from '../stylesheets/Checkout.module.css';
+
+const API_SHIPPING = import.meta.env.VITE_API_SHIPPING;
 
 const Checkout = () => {
     const { cartItems, checkout } = useCart();
+    const { authTokens } = useAuth();
     const navigate = useNavigate();
     
     const [formData, setFormData] = useState({
@@ -18,6 +23,27 @@ const Checkout = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if (authTokens?.token) {
+            axios.get(API_SHIPPING, {
+                headers: { Authorization: `Bearer ${authTokens.token}` }
+            })
+            .then(res => {
+                if (res.data && res.data.length > 0) {
+                    const addr = res.data[0];
+                    setFormData({
+                        addressLine1: addr.address_line1 || '',
+                        addressLine2: addr.address_line2 || '',
+                        postalCode: addr.postal_code || '',
+                        city: addr.city || '',
+                        country: addr.country || ''
+                    });
+                }
+            })
+            .catch(err => console.error('Failed to load saved addresses', err));
+        }
+    }, [authTokens]);
 
     if (cartItems.length === 0 && !success) {
         return (

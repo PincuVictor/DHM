@@ -37,6 +37,19 @@ namespace DHM.Infrastructure.Repositories
                 query = query.Where(p => p.CategoryId == parameters.CategoryId.Value);
             }
 
+            if (parameters.IsUpcoming.HasValue)
+            {
+                var now = System.DateTime.UtcNow;
+                if (parameters.IsUpcoming.Value)
+                {
+                    query = query.Where(p => p.ReleaseDate != null && p.ReleaseDate > now);
+                }
+                else
+                {
+                    query = query.Where(p => p.ReleaseDate == null || p.ReleaseDate <= now);
+                }
+            }
+
             var totalCount = await query.CountAsync();
 
             var products = await query

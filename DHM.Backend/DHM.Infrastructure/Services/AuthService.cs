@@ -27,15 +27,21 @@ namespace DHM.Infrastructure.Services
             _emailService = emailService;
         }
 
-        public async Task<AuthResponseDto> RegisterAsync(RegisterDto request)
+        public async Task<RegisterResponseDto> RegisterAsync(RegisterDto request)
         {
             var user = new User
             {
                 UserName = request.Email,
                 Email = request.Email,
                 FirstName = request.FirstName,
-                LastName = request.LastName
+                LastName = request.LastName,
+                EmailConfirmed = false
             };
+
+            var random = new Random();
+            var code = random.Next(100000, 999999).ToString();
+            user.VerificationCode = code;
+            user.VerificationCodeExpiry = DateTime.UtcNow.AddMinutes(15);
 
             var result = await _userManager.CreateAsync(user, request.Password);
 
@@ -47,9 +53,53 @@ namespace DHM.Infrastructure.Services
 
             await _userManager.AddToRoleAsync(user, "User");
 
-            var token = await GenerateJwtTokenAsync(user);
+            var emailBody = $@"
+                <h3>Welcome to DHM!</h3>
+                <p>Hi {user.FirstName},</p>
+                <p>Thank you for registering. Your verification code is:</p>
+                <h2>{code}</h2>
+                <p>This code will expire in 15 minutes.</p>
+            ";
 
-            await _emailService.SendEmailAsync(user.Email, "Welcome to DHM!", "Thank you for registering your account!");
+            await _emailService.SendEmailAsync(user.Email, "DHM Registration Verification Code", emailBody);
+
+            return new RegisterResponseDto
+            {
+                Message = "Registration successful. Please verify your email.",
+                Email = user.Email
+            };
+        }
+
+        public async Task<AuthResponseDto> VerifyAsync(VerifyDto request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            if (user.EmailConfirmed)
+            {
+                throw new Exception("User is already verified.");
+            }
+
+            if (user.VerificationCode != request.Code)
+            {
+                throw new Exception("Invalid verification code.");
+            }
+
+            if (user.VerificationCodeExpiry < DateTime.UtcNow)
+            {
+                throw new Exception("Verification code has expired.");
+            }
+
+            user.EmailConfirmed = true;
+            user.VerificationCode = null;
+            user.VerificationCodeExpiry = null;
+
+            await _userManager.UpdateAsync(user);
+
+            var token = await GenerateJwtTokenAsync(user);
 
             return new AuthResponseDto
             {
@@ -71,6 +121,11 @@ namespace DHM.Infrastructure.Services
             if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))
             {
                 throw new Exception("Invalid email or password.");
+            }
+
+            if (!user.EmailConfirmed)
+            {
+                throw new Exception("Email not verified. Please verify your email before logging in.");
             }
 
             var token = await GenerateJwtTokenAsync(user);

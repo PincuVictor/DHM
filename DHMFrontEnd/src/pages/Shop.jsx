@@ -7,7 +7,7 @@ import styles from '../stylesheets/Shop.module.css';
 const Shop = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [pageNumber, setPageNumber] = useState(1);
-    const { products, totalCount, loading, error } = useProducts(searchTerm, null, pageNumber, 12);
+    const { products, totalCount, loading, error } = useProducts(searchTerm, null, false, pageNumber, 12);
     const navigate = useNavigate();
 
     const handleSearch = (e) => {
@@ -78,9 +78,14 @@ const Shop = () => {
                             >
                                 <div className={styles.imageContainer}>
                                     {product.imageUrl ? (
-                                        <img src={`http://localhost:5090${product.imageUrl}`} alt={product.name} className={styles.productImage} />
+                                        <img 
+                                            src={`http://localhost:5090${product.imageUrl}`} 
+                                            alt={product.name} 
+                                            className={styles.productImage} 
+                                            onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/300?text=No+Image"; }}
+                                        />
                                     ) : (
-                                        <img src="https://via.placeholder.com/400?text=No+Image" alt="Placeholder" className={styles.productImage} />
+                                        <img src="https://via.placeholder.com/300?text=No+Image" alt="Placeholder" className={styles.productImage} />
                                     )}
                                 </div>
                                 <div className={styles.productInfo}>

@@ -27,4 +27,16 @@ namespace DHM.Application.DTOs
         public string Token { get; set; } = string.Empty;
         public UserDto User { get; set; } = default!;
     }
+
+    public class VerifyDto
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Code { get; set; } = string.Empty;
+    }
+
+    public class RegisterResponseDto
+    {
+        public string Message { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+    }
 }

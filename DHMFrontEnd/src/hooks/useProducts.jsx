@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_PRODUCTS = 'http://localhost:5090/api/Products';
 
-export const useProducts = (searchTerm = '', categoryId = null, pageNumber = 1, pageSize = 10) => {
+export const useProducts = (searchTerm = '', categoryId = null, isUpcoming = null, pageNumber = 1, pageSize = 10) => {
     const [products, setProducts] = useState([]);
     const [totalCount, setTotalCount] = useState(0);
     const [loading, setLoading] = useState(true);
@@ -17,6 +17,7 @@ export const useProducts = (searchTerm = '', categoryId = null, pageNumber = 1, 
                 let url = `${API_PRODUCTS}?pageNumber=${pageNumber}&pageSize=${pageSize}`;
                 if (searchTerm) url += `&searchTerm=${encodeURIComponent(searchTerm)}`;
                 if (categoryId) url += `&categoryId=${categoryId}`;
+                if (isUpcoming !== null) url += `&isUpcoming=${isUpcoming}`;
 
                 const response = await axios.get(url);
                 if (isMounted) {

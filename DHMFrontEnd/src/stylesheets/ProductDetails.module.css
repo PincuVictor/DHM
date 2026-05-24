@@ -95,6 +95,28 @@
     box-shadow: none;
 }
 
+.comingSoon {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.comingSoon h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    letter-spacing: 2px;
+}
+
+.comingSoon p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
 .loading {
     text-align: center;
     padding: 5rem 0;

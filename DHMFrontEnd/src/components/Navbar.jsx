@@ -1,88 +1,70 @@
-import React, {useEffect, useState} from 'react'
-import {Link, useNavigate} from "react-router-dom"
-import '../stylesheets/Navbar.css'
-import {ReactComponent as Logo} from "../assets/logo1.svg"
-import {ReactComponent as CartIcon} from "../assets/shopping-cart.svg"
+import React from 'react'
+import { Link, useNavigate, useLocation } from "react-router-dom"
+import { motion } from "framer-motion"
+import '../stylesheets/NavBar.css'
+import { ReactComponent as Logo } from "../assets/logo1.svg"
+import { ReactComponent as CartIcon } from "../assets/shopping-cart.svg"
 import { useCart } from '../hooks/useCart'
 
-const FillText = ({text, hovered}) => {
-    const [fillText, setFillText] = useState("")
+const NavLink = ({ to, children }) => {
+    const location = useLocation()
+    const isActive = location.pathname === to
 
-    useEffect(() => {
-        const widthInPx = window.innerWidth * 2
-        const temp = document.createElement('div')
-        temp.textContent = text
-        temp.style.visibility = 'hidden';
-        temp.style.whiteSpace = 'pre';
-        document.body.appendChild(temp);
-        const textWidth = temp.offsetWidth
-        document.body.removeChild(temp);
-        const count = Math.floor(widthInPx / textWidth)
-        console.log(textWidth)
-        setFillText(text.repeat(count))
-    }, [text])
     return (
-        <>
-            <p className={`fill-text rotate1 ${hovered ? "slide-in-left" : "slide-out-left"}`}>
-                {fillText}
-            </p>
-            <p className={`fill-text rotate2 ${hovered ? "slide-in-top" : "slide-out-top"}`}>
-                {fillText}
-            </p>
-            <p className={`fill-text rotate3 ${hovered ? "slide-in-right" : "slide-out-right"}`}>
-                {fillText}
-            </p>
-        </>
-    )
-}
-
-const AnimatedHover = ({link, linkText, text}) => {
-    const [hovered, setHovered] = useState(false);
-    return (
-        <li onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}>
-            <Link to={link}>{linkText}</Link>
-            <FillText text={text} hovered={hovered}/>
+        <li className="nav-item">
+            <Link to={to} className={`nav-link ${isActive ? 'active' : ''}`}>
+                {children}
+            </Link>
+            {isActive && (
+                <motion.div
+                    className="nav-underline"
+                    layoutId="underline"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                />
+            )}
         </li>
     )
 }
 
-function Navbar() {
-    const { cartCount } = useCart();
-    const navigate = useNavigate();
+function NavBar() {
+    const { cartCount } = useCart()
+    const navigate = useNavigate()
 
     return (
-        <div className={'container'}>
-            <div className={'navbar'}>
-                <ul className={'navbar-items'}>
-                    <Logo className={'logo'} onClick={() => navigate('/')} style={{cursor: 'pointer'}}/>
-                    <AnimatedHover link={'/'} linkText={'HOME'} text={'HOME       '}/>
-                    <AnimatedHover link={'/drop'} linkText={'DROP'} text={'DROP          '}/>
-                    <AnimatedHover link={'/shop'} linkText={'SHOP'} text={'SHOP       '}/>
-                    <AnimatedHover link={'/account'} linkText={'ACCOUNT'} text={'ACCOUNT       '}/>
-                    <li className="cart-container" onClick={() => navigate('/cart')} style={{cursor: 'pointer', position: 'relative'}}>
-                        <CartIcon className={'cart'}/>
-                        {cartCount > 0 && (
-                            <span style={{
-                                position: 'absolute',
-                                top: '-5px',
-                                right: '-10px',
-                                background: '#646cff',
-                                color: '#fff',
-                                borderRadius: '50%',
-                                padding: '2px 6px',
-                                fontSize: '0.8rem',
-                                fontWeight: 'bold'
-                            }}>
-                                {cartCount}
-                            </span>
-                        )}
-                    </li>
-                </ul>
-            </div>
+        <div className="navbar-container">
+            <nav className="navbar">
+                <div className="navbar-content">
+                    <div className="logo-container" onClick={() => navigate('/')}>
+                        <Logo className="logo" />
+                    </div>
+                    
+                    <ul className="navbar-links">
+                        <NavLink to="/">HOME</NavLink>
+                        <NavLink to="/drop">DROP</NavLink>
+                        <NavLink to="/shop">SHOP</NavLink>
+                        <NavLink to="/account">ACCOUNT</NavLink>
+                        
+                        <li className="cart-container" onClick={() => navigate('/cart')}>
+                            <CartIcon className="cart-icon" />
+                            {cartCount > 0 && (
+                                <motion.span 
+                                    className="cart-badge"
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    key={cartCount}
+                                >
+                                    {cartCount}
+                                </motion.span>
+                            )}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-
     )
 }
 
-export default Navbar
+export default NavBar

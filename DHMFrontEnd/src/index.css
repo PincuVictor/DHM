@@ -5,7 +5,7 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    /* Remove static background color to allow body gradient to shine */
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -28,6 +28,18 @@ body {
     min-width: 320px;
     min-height: 100vh;
     overflow-x: hidden;
+    
+    /* Modern Animated Dark Gradient */
+    background: linear-gradient(-45deg, #0a0a0a, #1a1a24, #0f172a, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #f1f5f9;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #root {
