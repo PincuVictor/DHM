@@ -5,8 +5,8 @@ import { FaEdit, FaTrash, FaSignOutAlt, FaBoxOpen, FaMapMarkerAlt, FaUser, FaEnv
 import { useAuth } from '../hooks/useAuth.jsx'
 import '../stylesheets/Account.css'
 
-const API_SHIPPING = import.meta.env.VITE_API_SHIPPING
-const API_ORDERS = 'http://localhost:5090/api/Orders'
+const API_SHIPPING = '/api/Shipping'
+const API_ORDERS = '/api/Orders'
 
 function Account() {
     const navigate = useNavigate()
@@ -121,7 +121,7 @@ function Account() {
             userName: `${credentials.first_name} ${credentials.last_name}`
         }
 
-        fetch('http://localhost:5090/api/Feedback', {
+        fetch('/api/Feedback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)

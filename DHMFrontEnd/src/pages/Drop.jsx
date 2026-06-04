@@ -84,7 +84,7 @@ function Drop() {
                             <div className="imageContainer">
                                 {product.imageUrl ? (
                                     <img 
-                                        src={`http://localhost:5090${product.imageUrl}`} 
+                                        src={`${product.imageUrl}`} 
                                         alt={product.name} 
                                         className="productImage" 
                                         onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/300?text=No+Image"; }}

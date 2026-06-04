@@ -57,7 +57,7 @@ export const AuthProvider = ({children}) => {
 
     const verifyUser = async (email, code) => {
         try {
-            const response = await axios.post('http://localhost:5090/api/Auth/verify', { email, code })
+            const response = await axios.post('/api/Auth/verify', { email, code })
             setAuthTokens(response.data)
             localStorage.setItem('authTokens', JSON.stringify(response.data))
             console.log(response.data)

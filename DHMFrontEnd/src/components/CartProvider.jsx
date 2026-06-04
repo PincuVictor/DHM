@@ -3,8 +3,8 @@ import axios from 'axios';
 import CartContext from './CartContext';
 import { useAuth } from '../hooks/useAuth';
 
-const API_CART = 'http://localhost:5090/api/Cart';
-const API_ORDERS = 'http://localhost:5090/api/Orders';
+const API_CART = '/api/Cart';
+const API_ORDERS = '/api/Orders';
 
 export const CartProvider = ({ children }) => {
     const { authTokens } = useAuth();

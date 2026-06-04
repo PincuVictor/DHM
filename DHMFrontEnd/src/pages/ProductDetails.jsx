@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useCart } from '../hooks/useCart';
 import styles from '../stylesheets/ProductDetails.module.css';
 
-const API_PRODUCTS = 'http://localhost:5090/api/Products';
+const API_PRODUCTS = '/api/Products';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -65,7 +65,7 @@ const ProductDetails = () => {
             <div className={styles.imageSection}>
                 {product.imageUrl ? (
                     <motion.img 
-                        src={`http://localhost:5090${product.imageUrl}`} 
+                        src={`${product.imageUrl}`} 
                         alt={product.name} 
                         className={styles.productImage}
                         initial={{ scale: 0.9 }}

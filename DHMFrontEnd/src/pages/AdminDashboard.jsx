@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import useAuth from '../hooks/useAuth';
 import styles from '../stylesheets/AdminDashboard.module.css';
 
-const API_BASE = 'http://localhost:5090/api';
+const API_BASE = '/api';
 
 const AdminDashboard = () => {
     const { isAdmin, authTokens } = useAuth();
