@@ -12,7 +12,7 @@ COPY DHM.UnitTests/*.csproj DHM.UnitTests/
 RUN dotnet restore DHM.API/DHM.API.csproj
 
 COPY . .
-RUN dotnet publish DHM.API/DHM.API.csproj -c Release -o /out --no-restore /p:UseAppHost=false
+RUN dotnet publish DHM.API/DHM.API.csproj -c Release -o /out /p:UseAppHost=false
 
 # Stage runtime - doar ASP.NET, fara SDK
 FROM mcr.microsoft.com/dotnet/aspnet:9.0-alpine
