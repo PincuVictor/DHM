@@ -114,9 +114,9 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        await DHM.Infrastructure.Data.DbSeeder.SeedRolesAndAdminAsync(services);
         var dbContext = services.GetRequiredService<DHMContext>();
         await dbContext.Database.MigrateAsync();
+        await DHM.Infrastructure.Data.DbSeeder.SeedRolesAndAdminAsync(services);
         if (dbContext.Database.IsRelational())
         {
             await dbContext.Database.ExecuteSqlRawAsync("UPDATE \"AspNetUsers\" SET \"EmailConfirmed\" = true;");
