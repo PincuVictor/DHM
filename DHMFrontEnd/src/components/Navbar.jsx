@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
-import '../stylesheets/NavBar.css'
+import '../stylesheets/Navbar.css'
 import { ReactComponent as Logo } from "../assets/logo1.svg"
 import { ReactComponent as CartIcon } from "../assets/shopping-cart.svg"
 import { useCart } from '../hooks/useCart'
