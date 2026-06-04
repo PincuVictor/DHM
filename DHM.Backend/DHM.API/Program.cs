@@ -36,8 +36,12 @@ builder.Services.AddCors(options =>
 
 // Add DbContext
 builder.Services.AddDbContext<DHMContext>(options =>
+{
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        b => b.MigrationsAssembly("DHM.Infrastructure")));
+        b => b.MigrationsAssembly("DHM.Infrastructure"));
+    options.ConfigureWarnings(warnings => 
+        warnings.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning));
+});
 
 // Add AutoMapper
 builder.Services.AddAutoMapper(cfg => {
