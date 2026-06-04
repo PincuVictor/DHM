@@ -2,7 +2,7 @@ import {Link, useParams} from "react-router-dom";
 import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 
-const API_VERIFY_EMAIL = import.meta.env.VITE_API_VERIFY_EMAIL;
+const API_VERIFY_EMAIL = '/api/Auth/verify-email';
 
 export default function EmailVerify() {
     const {uidb64, token} = useParams()

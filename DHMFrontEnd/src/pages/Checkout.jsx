@@ -6,7 +6,7 @@ import { useAuth } from '../hooks/useAuth';
 import axios from 'axios';
 import styles from '../stylesheets/Checkout.module.css';
 
-const API_SHIPPING = import.meta.env.VITE_API_SHIPPING;
+const API_SHIPPING = '/api/Shipping';
 
 const Checkout = () => {
     const { cartItems, checkout } = useCart();
