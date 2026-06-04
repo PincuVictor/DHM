@@ -1,0 +1,6 @@
+{
+  "DHM.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\DHM\\DHM.Backend\\DHM.API",
+  "DHM.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\DHM\\DHM.Backend\\DHM.Application",
+  "DHM.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\DHM\\DHM.Backend\\DHM.Domain",
+  "DHM.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\DHM\\DHM.Backend\\DHM.Infrastructure"
+}

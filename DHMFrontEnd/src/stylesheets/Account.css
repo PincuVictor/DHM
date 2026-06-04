@@ -363,6 +363,9 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+    .account-container {
+        padding: 1rem;
+    }
     .account-layout {
         flex-direction: column;
     }

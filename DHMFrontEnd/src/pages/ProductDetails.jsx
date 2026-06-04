@@ -51,13 +51,17 @@ const ProductDetails = () => {
     if (!product) return <div className={styles.loading}>Product not found</div>;
 
     return (
-        <motion.div 
-            className={styles.detailsContainer}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div className={styles.pageContainer}>
+            <button className={styles.backButton} onClick={() => navigate('/shop')}>
+                ← Back to Shop
+            </button>
+            <motion.div 
+                className={styles.detailsContainer}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+            >
             <div className={styles.imageSection}>
                 {product.imageUrl ? (
                     <motion.img 
@@ -101,6 +105,7 @@ const ProductDetails = () => {
                 )}
             </div>
         </motion.div>
+        </div>
     );
 };
 

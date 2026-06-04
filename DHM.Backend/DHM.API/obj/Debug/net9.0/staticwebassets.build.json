@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5iXTgRh0Q27NGyRrpJH0WJ0Cdbt5sZoWeqx9SLhaYBU=",
+  "Hash": "UqFRZRFnrLXci+TwCZcxQpllHPLzDpF7pt7KTpEcG+k=",
   "Source": "DHM.API",
   "BasePath": "_content/DHM.API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png",
       "SourceId": "DHM.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
       "BasePath": "_content/DHM.API",
-      "RelativePath": "images/products/bingu#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/products/1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,19 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nr8q4fkxse",
-      "Integrity": "HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=",
+      "Fingerprint": "smgw0rkb2z",
+      "Integrity": "NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\bingu.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png"
     },
     {
-      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png",
       "SourceId": "DHM.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
       "BasePath": "_content/DHM.API",
-      "RelativePath": "images/products/gantofu#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/products/5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,19 +52,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1wnkdknb93",
-      "Integrity": "8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=",
+      "Fingerprint": "ed825z2ngy",
+      "Integrity": "4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\gantofu.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png"
     },
     {
-      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png",
       "SourceId": "DHM.API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
       "BasePath": "_content/DHM.API",
-      "RelativePath": "images/products/sdingu#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/products/6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -73,17 +73,80 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "55rt61ruzf",
-      "Integrity": "qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=",
+      "Fingerprint": "q2ac8kocyk",
+      "Integrity": "/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\sdingu.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png"
+    },
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pz3s5p32pe",
+      "Integrity": "Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg"
+    },
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5rzyvxbb29",
+      "Integrity": "fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png"
+    },
+    {
+      "Identity": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png",
+      "SourceId": "DHM.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\",
+      "BasePath": "_content/DHM.API",
+      "RelativePath": "images/products/ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "on8oovis5f",
+      "Integrity": "1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png"
     }
   ],
   "Endpoints": [
     {
-      "Route": "images/products/bingu.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "Route": "images/products/1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -92,19 +155,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2053"
+          "Value": "150524"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=\""
+          "Value": "\"NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:16 GMT"
+          "Value": "Fri, 29 May 2026 14:45:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -114,13 +177,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw="
+          "Value": "sha256-NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA="
         }
       ]
     },
     {
-      "Route": "images/products/bingu.nr8q4fkxse.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
+      "Route": "images/products/1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.smgw0rkb2z.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -129,19 +192,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2053"
+          "Value": "150524"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=\""
+          "Value": "\"NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:16 GMT"
+          "Value": "Fri, 29 May 2026 14:45:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -151,21 +214,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nr8q4fkxse"
+          "Value": "smgw0rkb2z"
         },
         {
           "Name": "label",
-          "Value": "images/products/bingu.jpg"
+          "Value": "images/products/1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw="
+          "Value": "sha256-NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA="
         }
       ]
     },
     {
-      "Route": "images/products/gantofu.1wnkdknb93.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "Route": "images/products/5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.ed825z2ngy.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -174,19 +237,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8517"
+          "Value": "13422"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=\""
+          "Value": "\"4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:35 GMT"
+          "Value": "Fri, 29 May 2026 14:47:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -196,21 +259,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1wnkdknb93"
+          "Value": "ed825z2ngy"
         },
         {
           "Name": "label",
-          "Value": "images/products/gantofu.jpg"
+          "Value": "images/products/5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co="
+          "Value": "sha256-4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q="
         }
       ]
     },
     {
-      "Route": "images/products/gantofu.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
+      "Route": "images/products/5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -219,19 +282,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8517"
+          "Value": "13422"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=\""
+          "Value": "\"4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:35 GMT"
+          "Value": "Fri, 29 May 2026 14:47:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -241,13 +304,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co="
+          "Value": "sha256-4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q="
         }
       ]
     },
     {
-      "Route": "images/products/sdingu.55rt61ruzf.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
+      "Route": "images/products/6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -256,64 +319,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3174"
+          "Value": "177734"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=\""
+          "Value": "\"/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "55rt61ruzf"
-        },
-        {
-          "Name": "label",
-          "Value": "images/products/sdingu.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8="
-        }
-      ]
-    },
-    {
-      "Route": "images/products/sdingu.jpg",
-      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3174"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 24 May 2026 15:08:23 GMT"
+          "Value": "Fri, 29 May 2026 14:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -323,7 +341,298 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8="
+          "Value": "sha256-/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.q2ac8kocyk.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "177734"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:48:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q2ac8kocyk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4238"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:52:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).pz3s5p32pe.jpg",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4238"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:52:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pz3s5p32pe"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).5rzyvxbb29.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:43:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5rzyvxbb29"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:43:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.on8oovis5f.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6184"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:51:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "on8oovis5f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png",
+      "AssetFile": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6184"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 May 2026 14:51:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU="
         }
       ]
     }

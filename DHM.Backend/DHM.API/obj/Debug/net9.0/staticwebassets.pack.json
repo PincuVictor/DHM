@@ -1,16 +1,28 @@
 {
   "Files": [
     {
-      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\bingu.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\bingu.jpg"
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png",
+      "PackagePath": "staticwebassets\\images\\products\\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png"
     },
     {
-      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\gantofu.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\gantofu.jpg"
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png",
+      "PackagePath": "staticwebassets\\images\\products\\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png"
     },
     {
-      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\sdingu.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\sdingu.jpg"
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png",
+      "PackagePath": "staticwebassets\\images\\products\\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png"
+    },
+    {
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg",
+      "PackagePath": "staticwebassets\\images\\products\\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg"
+    },
+    {
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png",
+      "PackagePath": "staticwebassets\\images\\products\\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png"
+    },
+    {
+      "Id": "D:\\DHM\\DHM.Backend\\DHM.API\\wwwroot\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png",
+      "PackagePath": "staticwebassets\\images\\products\\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.DHM.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

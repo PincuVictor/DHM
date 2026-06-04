@@ -88,3 +88,100 @@
     color: #4CAF50;
     margin-bottom: 1rem;
 }
+
+.addressSelection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.addressList {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.addressCard {
+    background: #222;
+    border: 2px solid #333;
+    padding: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addressCard:hover {
+    border-color: #555;
+    background: #2a2a2a;
+}
+
+.addressCard.selected {
+    border-color: #646cff;
+    background: rgba(100, 108, 255, 0.1);
+}
+
+.addressCard p {
+    margin: 0 0 0.3rem 0;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.addNewBtn {
+    background: transparent;
+    color: #646cff;
+    border: 2px dashed #444;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addNewBtn:hover {
+    border-color: #646cff;
+    background: rgba(100, 108, 255, 0.05);
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.backBtn:hover {
+    color: #fff;
+}
+
+.newAddressForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.checkboxGroup label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.checkboxGroup input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}

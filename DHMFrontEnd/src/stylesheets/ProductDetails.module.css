@@ -1,7 +1,30 @@
-.detailsContainer {
+.pageContainer {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem 0;
+}
+
+.backButton {
+    background: transparent;
+    color: #888;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.backButton:hover {
+    color: #fff;
+}
+
+.detailsContainer {
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;

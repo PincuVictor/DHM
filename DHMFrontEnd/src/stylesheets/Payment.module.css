@@ -1,0 +1,205 @@
+.container {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    color: var(--text-color);
+}
+
+.paymentBox {
+    background: #111;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+}
+
+.header p {
+    color: #888;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.stripeForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputRow label {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.cardInputWrapper {
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.cardInputWrapper:focus-within {
+    border-color: #646cff;
+    box-shadow: 0 0 0 1px #646cff;
+}
+
+.cardNumberContainer {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding: 0 1rem;
+}
+
+.cardIcon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+.cardDetailsContainer {
+    display: flex;
+}
+
+.cardDetailsContainer input {
+    flex: 1;
+}
+
+.stripeInput {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+.stripeInput::placeholder {
+    color: #666;
+}
+
+.borderLeft {
+    border-left: 1px solid #444;
+}
+
+.standardInput {
+    background: #222;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.standardInput:focus {
+    border-color: #646cff;
+}
+
+.payBtn {
+    margin-top: 1rem;
+    background: #646cff;
+    color: #fff;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.payBtn:hover {
+    background: #535bf2;
+}
+
+.payBtn:disabled {
+    background: #444;
+    cursor: not-allowed;
+    color: #888;
+}
+
+.error {
+    color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+    border: 1px solid rgba(255, 68, 68, 0.3);
+}
+
+.stripeMockBadge {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.stripeMockBadge strong {
+    color: #888;
+}
+
+/* Success Styles */
+.success {
+    background: #111;
+    padding: 4rem 2rem;
+    border-radius: 24px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.successIcon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+}
+
+.success h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.success p {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.continueBtn {
+    background: #646cff;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.continueBtn:hover {
+    background: #535bf2;
+}

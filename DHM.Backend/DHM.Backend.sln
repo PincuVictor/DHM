@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHM.Infrastructure", "DHM.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHM.API", "DHM.API\DHM.API.csproj", "{4A60ABBB-467C-4DFA-B213-E9818D60884E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHM.UnitTests", "DHM.UnitTests\DHM.UnitTests.csproj", "{6A69E812-84D1-4DAE-B813-DBCB1FF51E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHM.IntegrationTests", "DHM.IntegrationTests\DHM.IntegrationTests.csproj", "{C2147385-52B9-43E4-B422-5CF68D2503BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{4A60ABBB-467C-4DFA-B213-E9818D60884E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A60ABBB-467C-4DFA-B213-E9818D60884E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A60ABBB-467C-4DFA-B213-E9818D60884E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A69E812-84D1-4DAE-B813-DBCB1FF51E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A69E812-84D1-4DAE-B813-DBCB1FF51E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A69E812-84D1-4DAE-B813-DBCB1FF51E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A69E812-84D1-4DAE-B813-DBCB1FF51E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2147385-52B9-43E4-B422-5CF68D2503BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2147385-52B9-43E4-B422-5CF68D2503BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2147385-52B9-43E4-B422-5CF68D2503BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2147385-52B9-43E4-B422-5CF68D2503BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

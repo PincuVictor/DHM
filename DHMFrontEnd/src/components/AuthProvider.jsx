@@ -76,6 +76,7 @@ export const AuthProvider = ({children}) => {
 
     const contextData = {
         authTokens,
+        isAdmin: authTokens?.user?.roles?.includes('Admin') || false,
         signupUser,
         verifyUser,
         loginUser,

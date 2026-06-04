@@ -99,6 +99,7 @@ namespace DHM.Infrastructure.Services
 
             await _userManager.UpdateAsync(user);
 
+            var roles = await _userManager.GetRolesAsync(user);
             var token = await GenerateJwtTokenAsync(user);
 
             return new AuthResponseDto
@@ -109,7 +110,8 @@ namespace DHM.Infrastructure.Services
                     Id = user.Id,
                     Email = user.Email,
                     FirstName = user.FirstName,
-                    LastName = user.LastName
+                    LastName = user.LastName,
+                    Roles = roles
                 }
             };
         }
@@ -128,6 +130,7 @@ namespace DHM.Infrastructure.Services
                 throw new Exception("Email not verified. Please verify your email before logging in.");
             }
 
+            var roles = await _userManager.GetRolesAsync(user);
             var token = await GenerateJwtTokenAsync(user);
 
             return new AuthResponseDto
@@ -138,7 +141,8 @@ namespace DHM.Infrastructure.Services
                     Id = user.Id,
                     Email = user.Email,
                     FirstName = user.FirstName,
-                    LastName = user.LastName
+                    LastName = user.LastName,
+                    Roles = roles
                 }
             };
         }

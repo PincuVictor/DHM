@@ -113,6 +113,11 @@ using (var scope = app.Services.CreateScope())
     try
     {
         await DHM.Infrastructure.Data.DbSeeder.SeedRolesAndAdminAsync(services);
+        var dbContext = services.GetRequiredService<DHMContext>();
+        if (dbContext.Database.IsRelational())
+        {
+            await dbContext.Database.ExecuteSqlRawAsync("UPDATE \"AspNetUsers\" SET \"EmailConfirmed\" = true;");
+        }
     }
     catch (Exception ex)
     {
@@ -122,3 +127,5 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
+public partial class Program { }

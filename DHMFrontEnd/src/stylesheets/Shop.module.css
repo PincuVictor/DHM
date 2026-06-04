@@ -142,3 +142,22 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+@media (max-width: 768px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .productInfo {
+        padding: 1rem;
+    }
+    
+    .productName {
+        font-size: 1rem;
+    }
+    
+    .productPrice {
+        font-size: 1rem;
+    }
+}

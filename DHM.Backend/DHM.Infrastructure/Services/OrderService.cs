@@ -12,12 +12,14 @@ namespace DHM.Infrastructure.Services
     public class OrderService : IOrderService
     {
         private readonly IGenericRepository<Order> _orderRepository;
+        private readonly IGenericRepository<Product> _productRepository;
         private readonly ICartService _cartService;
         private readonly IMapper _mapper;
 
-        public OrderService(IGenericRepository<Order> orderRepository, ICartService cartService, IMapper mapper)
+        public OrderService(IGenericRepository<Order> orderRepository, IGenericRepository<Product> productRepository, ICartService cartService, IMapper mapper)
         {
             _orderRepository = orderRepository;
+            _productRepository = productRepository;
             _cartService = cartService;
             _mapper = mapper;
         }
@@ -52,6 +54,21 @@ namespace DHM.Infrastructure.Services
             decimal totalPrice = 0;
             foreach (var item in cart.CartItems)
             {
+                var product = await _productRepository.GetByIdAsync(item.ProductId);
+                if (product == null)
+                {
+                    throw new System.Exception($"Product with ID {item.ProductId} no longer exists.");
+                }
+
+                if (product.StockQuantity < item.Quantity)
+                {
+                    throw new System.Exception($"Insufficient stock for {product.Name}. Available: {product.StockQuantity}, Requested: {item.Quantity}");
+                }
+
+                // Deduct stock
+                product.StockQuantity -= item.Quantity;
+                await _productRepository.UpdateAsync(product);
+
                 totalPrice += item.UnitPrice * item.Quantity;
                 order.OrderItems.Add(new OrderItem
                 {

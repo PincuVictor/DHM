@@ -1,58 +1,112 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\bingu.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>DHM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DHM.API</BasePath>
-      <RelativePath>images/products/bingu.jpg</RelativePath>
+      <RelativePath>images/products/1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nr8q4fkxse</Fingerprint>
-      <Integrity>HbFPHqUO30CF6zMF/7B97ttIud3hlEGwNTPXN4iU/Qw=</Integrity>
+      <Fingerprint>smgw0rkb2z</Fingerprint>
+      <Integrity>NGiexHBp1nsvJ5nfGA8nN4sCPT0W2XLyjdkQ0TwmCGA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\bingu.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\1ddfc8d1-5330-42d0-bac1-4dc9ef6b6830_Custom-Printed-Vintage-Acid-Wash-Oversized-T-shirt-Merchlist-Add-Your-Design-or-Logo-to-Oversized-Acid-Wash-Tshirt_Black_Front-1.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\gantofu.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png'))">
       <SourceType>Package</SourceType>
       <SourceId>DHM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DHM.API</BasePath>
-      <RelativePath>images/products/gantofu.jpg</RelativePath>
+      <RelativePath>images/products/5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1wnkdknb93</Fingerprint>
-      <Integrity>8eJMSMRYejZgroQqO6fKFOj/0EOvdbcDi9RyEN500co=</Integrity>
+      <Fingerprint>ed825z2ngy</Fingerprint>
+      <Integrity>4ge0otqHiWJ7meW6imm+HXJ/oik3o2xOQAwwIb0nV2Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\gantofu.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5281533a-d263-4480-b2ec-113766c5bf20_4d28b042dfc54472b81124a47ecc941b.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\sdingu.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png'))">
       <SourceType>Package</SourceType>
       <SourceId>DHM.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/DHM.API</BasePath>
-      <RelativePath>images/products/sdingu.jpg</RelativePath>
+      <RelativePath>images/products/6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>55rt61ruzf</Fingerprint>
-      <Integrity>qch67+87xJJFSdeQuRu9aKPQcXmeHMrYq8JqmkK83b8=</Integrity>
+      <Fingerprint>q2ac8kocyk</Fingerprint>
+      <Integrity>/umOyR9uUIiZ8RmeiG/KhSljjk9JsroeBzLBIt7OTgo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\sdingu.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\6839c5a9-e40c-433c-b69b-1c9d52f9025a_2048x2048-Mens-VarsityJacket-Black-110124-FrontOpen.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DHM.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DHM.API</BasePath>
+      <RelativePath>images/products/8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pz3s5p32pe</Fingerprint>
+      <Integrity>Ndz4JP4dJF8vxL1OYrqtZUg4WThE3aTrqwv5/T8HbQA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\8ef83aa6-fd49-43bb-99bc-3a06b69b5a8e_download (4).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DHM.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DHM.API</BasePath>
+      <RelativePath>images/products/d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5rzyvxbb29</Fingerprint>
+      <Integrity>fwMVgMlbgJ/sGMJiMZSB0YlUrT8LqLO/QLP+79E46nQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\d10744f0-a8aa-4b02-96ac-01a5c77b7a48_HeavyWeightCottonHoodie_Black_Front_6399_v01 (1).png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>DHM.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DHM.API</BasePath>
+      <RelativePath>images/products/ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>on8oovis5f</Fingerprint>
+      <Integrity>1FXhuMX9R/8nKFC/nx3W+B7F4FAzO+hhChh1RXXnShU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\ea6ded5f-cec3-4298-9d22-18e1dcd17c1d_shopping.png'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

@@ -16,6 +16,8 @@ const Shop = lazy(() => import('./pages/Shop.jsx'));
 const ProductDetails = lazy(() => import('./pages/ProductDetails.jsx'));
 const Cart = lazy(() => import('./pages/Cart.jsx'));
 const Checkout = lazy(() => import('./pages/Checkout.jsx'));
+const Payment = lazy(() => import('./pages/Payment.jsx'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard.jsx'));
 
 import Layout from './components/Layout.jsx';
 import CartProvider from './components/CartProvider.jsx';
@@ -33,9 +35,11 @@ function App() {
                                 <Route path="/product/:id" element={<ProductDetails />} />
                                 <Route path="/cart" element={<Cart />} />
                                 <Route path="/checkout" element={<Checkout />} />
+                                <Route path="/payment" element={<Payment />} />
                                 <Route path="/drop" element={<Drop />} />
                                 <Route path="/contact" element={<Home />} />
                                 <Route path="/account" element={<Account />} />
+                                <Route path="/admin" element={<AdminDashboard />} />
                             </Route>
                             <Route path="/login" element={<Login />} />
                             <Route path="/signup" element={<Signup />} />
