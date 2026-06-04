@@ -31,6 +31,8 @@ services:
       JwtSettings__Issuer: "DHM.API"
       JwtSettings__Audience: "DHM.Frontend"
       ASPNETCORE_ENVIRONMENT: Production
+      SmtpSettings__Username: ${SMTP_USER:-dhm.clothing.official@gmail.com}
+      SmtpSettings__Password: ${SMTP_PASS:-}
     expose: ["8080"]
     networks: [studlab_net]
     restart: unless-stopped
