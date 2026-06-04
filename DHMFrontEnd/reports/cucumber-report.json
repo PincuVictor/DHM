@@ -1,0 +1,447 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-cart-management;adding-a-product-to-the-basket",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Adding a product to the basket",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 92239000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "support\\steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143367500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I login with \"test@dhm.com\" and \"Testing!23\"",
+            "match": {
+              "location": "support\\steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1117896200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I navigate to the shop and add the \"The Block\" product to my cart",
+            "match": {
+              "location": "support\\steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4060673100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the cart badge should update",
+            "match": {
+              "location": "support\\steps.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 539432900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15759099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 1
+          },
+          {
+            "name": "@cart",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "shopping-cart-management",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Shopping Cart Management",
+    "tags": [
+      {
+        "name": "@e2e",
+        "line": 1
+      },
+      {
+        "name": "@cart",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "order-checkout;successful-checkout-process",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Successful checkout process",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72811099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "support\\steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120872499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I login with \"test@dhm.com\" and \"Testing!23\"",
+            "match": {
+              "location": "support\\steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1041326000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I navigate to the shop and add the \"The Block\" product to my cart",
+            "match": {
+              "location": "support\\steps.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3518113199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I navigate to the cart and proceed through all checkout steps",
+            "match": {
+              "location": "support\\steps.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1483341199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter my payment details and finish",
+            "match": {
+              "location": "support\\steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 513961299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see a successful payment message",
+            "match": {
+              "location": "support\\steps.js:136"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10008052799,
+              "error_message": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Payment Successful!\"') to be visible\u001b[22m\n\n    at World.<anonymous> (D:\\DHM\\DHMFrontEnd\\support\\steps.js:137:44)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38007099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 1
+          },
+          {
+            "name": "@checkout",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "order-checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Order Checkout",
+    "tags": [
+      {
+        "name": "@e2e",
+        "line": 1
+      },
+      {
+        "name": "@checkout",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\checkout.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication;existing-user-logs-in-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Existing user logs in with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 110480500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "support\\steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121524300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I login with \"test@dhm.com\" and \"Testing!23\"",
+            "match": {
+              "location": "support\\steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1037191500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should be redirected to the home page",
+            "match": {
+              "location": "support\\steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110813799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9652600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Authentication",
+    "tags": [
+      {
+        "name": "@e2e",
+        "line": 1
+      },
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-registration;visitor-registers-a-new-customer-account",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Visitor registers a new customer account",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 70873499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the register page",
+            "match": {
+              "location": "support\\steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113252000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I fill out the registration form with valid data",
+            "match": {
+              "location": "support\\steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1127284499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should be prompted to verify my email",
+            "match": {
+              "location": "support\\steps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2435633799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3323300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@e2e",
+            "line": 1
+          },
+          {
+            "name": "@register",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-registration",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Registration",
+    "tags": [
+      {
+        "name": "@e2e",
+        "line": 1
+      },
+      {
+        "name": "@register",
+        "line": 1
+      }
+    ],
+    "uri": "src\\features\\register.feature"
+  }
+]

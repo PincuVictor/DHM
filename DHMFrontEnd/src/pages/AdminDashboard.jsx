@@ -111,7 +111,6 @@ const AdminDashboard = () => {
             setProdStock('');
             setProdImage(null);
             setProdRelease('');
-            // Optional: reset file input via ref
         } catch (err) {
             console.error(err);
             setProdStatus({ type: 'error', message: 'Failed to add product' });

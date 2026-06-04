@@ -40,7 +40,7 @@ namespace DHM.API.Controllers
                 <p>{request.Message}</p>
             ";
 
-            // Send to official DHM email (this assumes the SmtpSettings sender is used, but we'll hardcode the recipient for feedback)
+            // Send to official DHM email
             var targetEmail = "dhm.clothing.official@gmail.com";
 
             await _emailService.SendEmailAsync(targetEmail, subject, body);

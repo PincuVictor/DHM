@@ -136,3 +136,4 @@ D:\DHM\DHM.Backend\DHM.UnitTests\obj\Debug\net9.0\refint\DHM.UnitTests.dll
 D:\DHM\DHM.Backend\DHM.UnitTests\obj\Debug\net9.0\DHM.UnitTests.pdb
 D:\DHM\DHM.Backend\DHM.UnitTests\obj\Debug\net9.0\DHM.UnitTests.genruntimeconfig.cache
 D:\DHM\DHM.Backend\DHM.UnitTests\obj\Debug\net9.0\ref\DHM.UnitTests.dll
+D:\DHM\DHM.Backend\DHM.UnitTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
