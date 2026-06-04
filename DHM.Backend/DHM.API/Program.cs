@@ -36,7 +36,8 @@ builder.Services.AddCors(options =>
 
 // Add DbContext
 builder.Services.AddDbContext<DHMContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+        b => b.MigrationsAssembly("DHM.Infrastructure")));
 
 // Add AutoMapper
 builder.Services.AddAutoMapper(cfg => {
