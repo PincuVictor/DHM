@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import AuthContext from "./AuthContext.jsx";
 
-const API_LOGIN = import.meta.env.VITE_API_LOGIN;
-const API_REGISTER = import.meta.env.VITE_API_REGISTER;
+const API_LOGIN = '/api/Auth/login';
+const API_REGISTER = '/api/Auth/register';
 
 export const AuthProvider = ({children}) => {
     const [authTokens, setAuthTokens] = useState(() =>
