@@ -9,6 +9,8 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 // Add Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -114,6 +116,7 @@ using (var scope = app.Services.CreateScope())
     {
         await DHM.Infrastructure.Data.DbSeeder.SeedRolesAndAdminAsync(services);
         var dbContext = services.GetRequiredService<DHMContext>();
+        await dbContext.Database.MigrateAsync();
         if (dbContext.Database.IsRelational())
         {
             await dbContext.Database.ExecuteSqlRawAsync("UPDATE \"AspNetUsers\" SET \"EmailConfirmed\" = true;");

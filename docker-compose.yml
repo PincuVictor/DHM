@@ -1,16 +1,53 @@
-version: '3.8'
+name: student-victor
 
 services:
   db:
-    image: postgres:15
+    image: postgres:16-alpine
+    container_name: student-victor-db
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: dhmdatabase
-    ports:
-      - "5432:5432"
+      POSTGRES_USER:     ${DB_USER:-dhm}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-dhm-demo-pass-2026}
+      POSTGRES_DB:       ${DB_NAME:-dhm}
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-dhm}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks: [studlab_net]
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./DHM.Backend
+    container_name: student-victor-api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=student-victor-db;Port=5432;Database=${DB_NAME:-dhm};Username=${DB_USER:-dhm};Password=${DB_PASSWORD:-dhm-demo-pass-2026}"
+      JwtSettings__Secret: ${JWT_KEY:-dhm-jwt-key-2026-not-for-prod-min-32-chars-pls-replace}
+      JwtSettings__Issuer: "DHM.API"
+      JwtSettings__Audience: "DHM.Frontend"
+      ASPNETCORE_ENVIRONMENT: Production
+    expose: ["8080"]
+    networks: [studlab_net]
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./DHMFrontEnd
+    container_name: student-victor-frontend
+    depends_on: [api]
+    expose: ["80"]
+    networks: [studlab_net]
+    restart: unless-stopped
 
 volumes:
-  pgdata:
+  db_data:
+
+networks:
+  studlab_net:
+    external: true
+    name: studlab_net

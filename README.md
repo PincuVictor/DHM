@@ -100,3 +100,8 @@ npx cucumber-js -c config/cucumber.js
 ## Docker Deployment
 
 This project is structured and prepared for containerization. Ensure both the `DHMFrontEnd` and `DHM.Backend` are mounted or built into images using their respective `Dockerfile`s (or via a root `docker-compose.yml`).
+
+## Photos
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image.png)
